@@ -20,7 +20,8 @@ return new class extends Migration
             $table->time('arrival_time')->format('H,i,s');
             $table->string('train_code', 25);
             $table->tinyInteger('number_carriages')->unsigned();
-            $table->boolean('train_code', 25);
+
+
             $table->timestamps();
         });
     }

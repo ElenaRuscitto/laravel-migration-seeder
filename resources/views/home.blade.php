@@ -11,7 +11,7 @@
 @section('content')
 
  <div class="container">
-    <h1>I Treni</h1>
+    <h1 class="my-5 text-center">I Treni</h1>
 
 
                 <table class="table table-striped">
@@ -32,9 +32,9 @@
 
                      @foreach ($trains as $train)
                         <tr>
-                            <th scope="row">{{$train->agency}}</th>
-                            <td>{{$train->departure_station}}</td>
-                            <td>{{$train->arrival_station}}</td>
+                            <th scope="row" class="text-capitalize">{{$train->agency}}</th>
+                            <td class="text-capitalize">{{$train->departure_station}}</td>
+                            <td class="text-capitalize">{{$train->arrival_station}}</td>
                             <td>{{$train->departure_time}}</td>
                             <td>{{$train->arrival_time}}</td>
                             <td>{{$train->train_code}}</td>

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             $table->boolean('is_time')->default(true)->nullable();
-            $table->string('deleted', 10)->nullable();
+            $table->boolean('deleted')->default(false)->nullable();
         });
     }
 

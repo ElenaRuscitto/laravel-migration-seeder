@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string('agency', 40);
-            $table->string('departure_station', 50);
-            $table->string('arrival_station', 50);
+            $table->string('departure_station', 60);
+            $table->string('arrival_station', 60);
             $table->time('departure_time')->format('H,i,s');
             $table->time('arrival_time')->format('H,i,s');
-            $table->string('train_code', 25);
+            $table->char('train_code', 12);
             $table->tinyInteger('number_carriages')->unsigned()->nullable();
 
 

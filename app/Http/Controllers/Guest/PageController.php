@@ -14,8 +14,10 @@ class PageController extends Controller
         return view('home', compact ('trains'));
     }
 
-    public function nuovaPagina(){
-        return view('nuova-pagina');
-    }
+    public function detail($id){
+        $title = 'details';
+        $train = Train::find($id);
 
+        return view('detail', compact('train', 'title'));
+    }
 }

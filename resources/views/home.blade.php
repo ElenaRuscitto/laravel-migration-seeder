@@ -1,6 +1,8 @@
 @extends('layout.main')
 
-
+@section('title')
+    Home
+@endsection
 
 
 
@@ -22,6 +24,7 @@
                             <th scope="col">Orario di partenza</th>
                             <th scope="col">Orario di arrivo</th>
                             <th scope="col">Codice Treno</th>
+                            <th scope="col">Dettagli Treno</th>
                         </tr>
 
                     </thead>
@@ -35,6 +38,9 @@
                             <td>{{$train->departure_time}}</td>
                             <td>{{$train->arrival_time}}</td>
                             <td>{{$train->train_code}}</td>
+                            <td><a href="{{ route('detail', ['id' => $train->id]) }}">
+                                <i class="fa-solid fa-info ps-5"></i>
+                            </a></td>
                         </tr>
                       @endforeach
 

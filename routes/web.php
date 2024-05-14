@@ -20,8 +20,6 @@ Route::get('/', [PageController::class, 'index'] )->name('home');
 //     return view('home');
 // })->name('home');
 
-Route::get('/nuova-pagina', [PageController::class, 'nuovaPagina'] )->name('nuova-pagina');
 
-// Route::get('/nuova-pag', function () {
-//     return view('nuova-pagina');
-// })->name('nuova-pagina');
+
+Route::get('/detail/{id}', [PageController::class, 'detail'] )->name('detail');

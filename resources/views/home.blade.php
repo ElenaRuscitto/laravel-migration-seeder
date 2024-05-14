@@ -11,18 +11,19 @@
  <div class="container">
     <h1>I Treni</h1>
 
-            <table class="table ">
+
                 <table class="table table-striped">
                     <thead>
 
-                      <tr>
-                        <th scope="col">Azienda</th>
-                        <th scope="col">Stazione di partenza</th>
-                        <th scope="col">Stazione di arrivo</th>
-                        <th scope="col">Orario di partenza</th>
-                        <th scope="col">Orario di arrivo</th>
-                        <th scope="col">Codice Treno</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">Azienda</th>
+                            <th scope="col">Stazione di partenza</th>
+                            <th scope="col">Stazione di arrivo</th>
+                            <th scope="col">Orario di partenza</th>
+                            <th scope="col">Orario di arrivo</th>
+                            <th scope="col">Codice Treno</th>
+                        </tr>
+
                     </thead>
                     <tbody>
 
@@ -38,9 +39,10 @@
                       @endforeach
 
                     </tbody>
-                  </table>
-            </table>
+                </table>
 
+
+            {{$trains->links()}}
  </div>
 
 @endsection

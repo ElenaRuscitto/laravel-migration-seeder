@@ -9,7 +9,8 @@ use App\Models\Train;
 class PageController extends Controller
 {
     public function index(){
-        $trains = Train::all();
+        // $trains = Train::all();
+        $trains = Train::orderBy('departure_time')->paginate(15);
         return view('home', compact ('trains'));
     }
 
